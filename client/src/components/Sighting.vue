@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     deleteSighting(){
-      SightingService.deleteSighting(this.sighting.id)
+      SightingService.deleteSighting(this.sighting._id)
       .then(() => eventBus.$emit('delete-sighting', this.sighting._id))
     }
   }

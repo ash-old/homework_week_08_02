@@ -28,7 +28,8 @@ export default {
 			this.sightings.push(sighting)
 		})
 
-		eventBus.$on('delete-sighting', (sighting) =>{
+		eventBus.$on('delete-sighting', (id) =>{
+			let index = this.sightings.findIndex(sighting => sighting._id === id)
 			this.sightings.splice(index, 1)
 		})
 	}
